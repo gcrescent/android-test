@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <style name="horizontal_line">
@@ -18,5 +21,24 @@
         <item name="android:background">@color/divider</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">1dp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Main">
+        <item name="android:background">@drawable/main_button_background</item>
+    </style>
+
+    <style name="Button.Secondary">
+        <item name="android:background">@drawable/secondary_button_background</item>
     </style>
 </resources>
