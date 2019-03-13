@@ -75,6 +75,10 @@ class PulsaFragment : BaseFragment(), PulsaFragmentPresenter.View {
             }
         })
 
+        clearPhoneNumber.setOnClickListener {
+            phoneNumber.text.clear()
+        }
+
         presenter.fetchPromotions()
     }
 
@@ -109,6 +113,12 @@ class PulsaFragment : BaseFragment(), PulsaFragmentPresenter.View {
         if (promos.isNotEmpty()) {
             promoContainer.visibility = View.VISIBLE
             val promoAdapter = PromoAdapter(requireActivity())
+            promoAdapter.onItemClickListener = object : BaseAdapter.OnItemClickListener<Promo> {
+                override fun onItemClick(t: Promo) {
+                    startActivity(PromoDetailActivity.newIntent(requireContext(), t))
+                }
+            }
+
             promoAdapter.addObjects(promos)
             promotionList.adapter = promoAdapter
         } else {

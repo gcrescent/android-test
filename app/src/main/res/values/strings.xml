@@ -27,5 +27,22 @@
     <string name="invoice_notice">Invoice has been emailed to you\nHave problem? Email us at support@kredivo.com</string>
 
     <string name="promo">Promo</string>
+    <string name="valid_date">Valid Date</string>
+    <string name="voucher_code">Voucher Code</string>
+    <string name="copy">Copy</string>
+    <string name="voucher_code_copied">Voucher code copied</string>
+    <string name="terms_condition">Terms &amp; Conditions</string>
+
+    <string name="interpunct">\u2022</string>
+    <string name="hardcoded_promo_name">Discount 20% at Kedai Hape Original, Mall Kota Kasablanka</string>
+    <string name="hardcoded_promo_valid_date">1 – 31 Maret 2019</string>
+    <string name="hardcoded_promo_code">BIRTHDAY9</string>
+    <string-array name="hardcoded_promo_terms">
+        <item>Promo berlaku untuk transaksi yang dilakukan diaplikasi terbaru Bukalapak.</item>
+        <item>Gunakan kode BIRTHDAY9 untuk dapatkan cashback sebesar 3%.</item>
+        <item>Promo hanya berlaku untuk transaksi yang menggunakan metode pengiriman J&amp;T Express dan Ninja Xpress (REG dan FAST).</item>
+        <item>Setiap pengguna bisa menggunakan promo 2 (dua) kali selama periode Promo.</item>
+        <item>Voucher bisa digunakan untuk berbelanja produk kategori apa saja, yang ada di Bukalapak kecuali kategori tiket dan voucher, produk virtual (pulsa, paket data, voucher game, token &amp; tagihan listrik, tiket pesawat, tiket kereta, pembayaran zakat online) dan produk keuangan (BukaEmas dan BukaReksa).</item>
+    </string-array>
 
 </resources>
