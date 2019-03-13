@@ -10,6 +10,22 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="nominal">Nominal :</string>
 
+    <string name="otp_notice">OTP is not needed for first transaction of the day thai is less than Rp 200.000</string>
+    <string name="loan_confirmation">Loan Confirmation</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="admin_fee">Admin fee</string>
+    <string name="pay_in_30_days">Pay in 30 days</string>
+    <string name="kredivo_pin">Kredivo PIN</string>
+    <string name="pin">PIN</string>
+    <string name="payment_terms">By continuing, I agree with loan agreement of Kredivo</string>
+    <string name="pay">Pay</string>
+
+    <string name="status">Status</string>
+    <string name="success">Success</string>
+    <string name="order_details">Order Details</string>
+    <string name="order_id">Order ID</string>
+    <string name="invoice_notice">Invoice has been emailed to you\nHave problem? Email us at support@kredivo.com</string>
+
     <string name="promo">Promo</string>
 
 </resources>

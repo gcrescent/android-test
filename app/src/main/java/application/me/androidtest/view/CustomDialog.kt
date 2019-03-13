@@ -21,6 +21,7 @@ class CustomDialog(context: Context, message: CharSequence?) : Dialog(context) {
         window?.setLayout(DimensionHelper.getScreenWidth(getContext()) * 6 / 7, WindowManager.LayoutParams.WRAP_CONTENT)
 
         setMessage(message)
+        setSingleButton(context.getString(R.string.ok), View.OnClickListener {  })
     }
 
     fun setMessage(message: CharSequence?) {

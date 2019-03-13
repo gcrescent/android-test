@@ -1,6 +1,7 @@
 package application.me.androidtest.model
 
 import application.me.androidtest.R
+import application.me.androidtest.formatMoney
 
 class PulsaInteractor {
 
@@ -14,14 +15,14 @@ class PulsaInteractor {
         return R.drawable.indosat
     }
 
-    private fun getProducts(phoneNumber: String): List<Int> {
+    private fun getProducts(phoneNumber: String): List<Product> {
         // hardcoded because no api call
-        val products = ArrayList<Int>()
-        products.add(25000)
-        products.add(50000)
-        products.add(100000)
-        products.add(150000)
-        products.add(200000)
+        val products = ArrayList<Product>()
+        products.add(Product(25000.formatMoney, 25000))
+        products.add(Product(50000.formatMoney, 50000))
+        products.add(Product(100000.formatMoney, 100000))
+        products.add(Product(150000.formatMoney, 150000))
+        products.add(Product(200000.formatMoney, 200000))
         return products
     }
 
@@ -36,6 +37,6 @@ class PulsaInteractor {
     }
 
     interface OnFetchSuccessListener {
-        fun onSuccess(operatorLogo: Int?, products: List<Int>)
+        fun onSuccess(operatorLogo: Int?, products: List<Product>)
     }
 }

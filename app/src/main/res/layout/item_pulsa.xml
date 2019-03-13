@@ -29,7 +29,8 @@
     <Button
         style="@style/Button.Secondary"
         android:id="@+id/selectAmount"
-        android:layout_width="wrap_content"
+        app:layout_constraintWidth_percent=".35"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Rp 50.000"
         app:layout_constraintBottom_toBottomOf="parent"

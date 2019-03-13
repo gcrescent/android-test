@@ -7,15 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import application.me.androidtest.R
 import application.me.androidtest.formatMoney
 import application.me.androidtest.formatNumber
+import application.me.androidtest.model.Product
 import kotlinx.android.synthetic.main.item_pulsa.view.*
 
-class PulsaAdapter : BaseAdapter<Int>() {
+class ProductAdapter : BaseAdapter<Product>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return PulsaViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_pulsa, parent, false))
     }
 
-    override fun onBindItemViewHolder(holder: RecyclerView.ViewHolder, position: Int, t: Int) {
+    override fun onBindItemViewHolder(holder: RecyclerView.ViewHolder, position: Int, t: Product) {
         (holder as PulsaViewHolder).onBind(t)
         holder.itemView.selectAmount.setOnClickListener {
             onItemClickListener.onItemClick(t)
@@ -24,9 +25,9 @@ class PulsaAdapter : BaseAdapter<Int>() {
 
     private class PulsaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        fun onBind(amount: Int) {
-            itemView.amount.text = amount.formatNumber
-            itemView.selectAmount.text = amount.formatMoney
+        fun onBind(product: Product) {
+            itemView.amount.text = product.name
+            itemView.selectAmount.text = product.amount.formatMoney
         }
     }
 }
