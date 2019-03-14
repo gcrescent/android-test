@@ -1,28 +1,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="application.me.androidtest">
+    package="application.me.androidtest">
 
-    <application android:allowBackup="true"
-                 android:label="@string/app_name"
-                 android:icon="@mipmap/ic_launcher"
-                 android:roundIcon="@mipmap/ic_launcher_round"
-                 android:supportsRtl="true"
-                 android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity"
-                  android:screenOrientation="portrait">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.PaymentConfirmationActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.PaymentConfirmationActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.PaymentDetailsActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.PaymentDetailsActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.PromoDetailActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.PromoDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
