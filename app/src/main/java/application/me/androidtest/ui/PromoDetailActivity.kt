@@ -38,6 +38,10 @@ class PromoDetailActivity : BaseActivity(), PromoDetailPresenter.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_promo_detail)
 
+        showToolbar()
+        setActionTitle(getString(R.string.merchant_promo))
+        showBackButton()
+
         presenter = PromoDetailPresenter(this, PromoInteractor(this))
         promo = intent.getParcelableExtra(INTENT_PROMO)
 

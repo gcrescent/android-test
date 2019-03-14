@@ -9,7 +9,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -44,7 +48,6 @@
                     android:id="@+id/promoName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Discount 20% at"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -60,8 +63,7 @@
                     android:id="@+id/promoValidDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="10 - 31 Januari 2019" />
+                    android:layout_marginTop="2dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -88,8 +90,6 @@
                         android:lines="1"
                         android:paddingLeft="@dimen/base_margin"
                         android:paddingRight="@dimen/base_margin"
-                        android:text="MARETHEBAT"
-                        android:textColor="@color/dark_text_color"
                         android:textStyle="bold" />
 
                     <TextView

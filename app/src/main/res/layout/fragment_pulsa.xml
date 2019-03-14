@@ -7,8 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:animateLayoutChanges="true">
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,6 +20,9 @@
                 android:id="@+id/pulsaOperatorLogo"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
                 android:scaleType="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -30,10 +33,10 @@
                 android:id="@+id/phoneNumberInputLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@id/pulsaOperatorLogo"
-                app:layout_constraintRight_toLeftOf="@id/openContact"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                app:layout_constraintLeft_toRightOf="@id/pulsaOperatorLogo"
+                app:layout_constraintRight_toLeftOf="@id/openContact">
 
                 <EditText
                     android:id="@+id/phoneNumber"
@@ -71,24 +74,24 @@
             android:id="@+id/productList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@color/white"
+            android:layout_marginTop="12dp"
             android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/promoContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:paddingTop="16dp">
+            android:paddingTop="@dimen/base_margin"
+            android:paddingBottom="@dimen/base_margin">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
                 android:text="@string/promo"
                 android:textStyle="bold" />
 
@@ -96,8 +99,10 @@
                 android:id="@+id/promotionList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:clipToPadding="false"
-                android:padding="16dp" />
+                android:paddingLeft="@dimen/base_margin"
+                android:paddingRight="@dimen/base_margin" />
         </LinearLayout>
 
     </LinearLayout>

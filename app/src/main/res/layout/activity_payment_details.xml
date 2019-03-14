@@ -8,7 +8,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,7 +23,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/base_margin"
             android:clipChildren="false"
             android:orientation="vertical">
 
@@ -29,7 +32,8 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:layout_marginRight="@dimen/base_margin"
-                app:cardCornerRadius="@dimen/card_radius">
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -45,7 +49,11 @@
                         android:paddingRight="@dimen/base_margin"
                         android:paddingBottom="12dp"
                         android:text="@string/order_details"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
+
+                    <View
+                        style="@style/horizontal_line"
+                        app:layout_constraintTop_toBottomOf="@id/paymentStatusHeader" />
 
                     <ImageView
                         android:id="@+id/pulsaOperatorLogo"
@@ -53,8 +61,13 @@
                         android:layout_height="48dp"
                         android:layout_marginStart="@dimen/base_margin"
                         android:layout_marginTop="@dimen/base_margin"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/circle_background"
+                        android:padding="8dp"
+                        android:scaleType="center"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/paymentStatusHeader" />
+                        app:layout_constraintTop_toBottomOf="@id/paymentStatusHeader"
+                        app:srcCompat="@drawable/ic_phone" />
 
                     <TextView
                         android:id="@+id/pulsaPhoneNumber"
@@ -62,8 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/base_margin"
                         android:layout_marginEnd="@dimen/base_margin"
-                        android:text="0858"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="@id/pulsaOperatorLogo"
                         app:layout_constraintLeft_toRightOf="@id/pulsaOperatorLogo"
                         app:layout_constraintRight_toRightOf="parent"
@@ -137,7 +149,8 @@
                 android:layout_marginLeft="@dimen/base_margin"
                 android:layout_marginTop="@dimen/base_margin"
                 android:layout_marginRight="@dimen/base_margin"
-                app:cardCornerRadius="@dimen/card_radius">
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -153,7 +166,7 @@
                         android:paddingRight="@dimen/base_margin"
                         android:paddingBottom="12dp"
                         android:text="@string/payment_details"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <View
                         style="@style/horizontal_line"
@@ -166,7 +179,6 @@
                         android:layout_marginLeft="@dimen/base_margin"
                         android:layout_marginTop="@dimen/base_margin"
                         android:layout_marginRight="@dimen/base_margin"
-                        android:text="Pulsa 50.000"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toLeftOf="@+id/barrier"
                         app:layout_constraintTop_toBottomOf="@id/paymentDetailsHeader" />
@@ -186,8 +198,9 @@
                     <ImageView
                         android:id="@+id/paymentDetailsDivider"
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="3dp"
                         android:layout_marginTop="@dimen/base_margin"
+                        android:layerType="software"
                         android:src="@drawable/dotted_line"
                         app:layout_constraintTop_toBottomOf="@id/adminFee" />
 
@@ -197,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/base_margin"
                         android:text="@string/pay_in_30_days"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toLeftOf="@+id/barrier"
@@ -216,7 +229,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/base_margin"
                         android:layout_marginRight="@dimen/base_margin"
-                        android:text="Pulsa 50.000"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@id/productName" />
 
@@ -226,7 +238,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/base_margin"
                         android:layout_marginRight="@dimen/base_margin"
-                        android:text="@string/admin_fee"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@id/adminFeeHint" />
 
@@ -236,9 +247,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/base_margin"
                         android:layout_marginRight="@dimen/base_margin"
-                        android:text="Pulsa 50.000"
                         android:textColor="@color/colorAccent"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@id/totalHint" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -249,14 +259,16 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/base_margin"
                 app:cardBackgroundColor="@color/header_background"
-                app:cardCornerRadius="@dimen/card_radius">
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="1dp">
 
                 <TextView
                     android:id="@+id/invoiceNotice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/base_margin"
-                    android:text="@string/invoice_notice" />
+                    android:text="@string/invoice_notice"
+                    android:textSize="12sp" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

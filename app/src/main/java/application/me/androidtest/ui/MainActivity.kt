@@ -14,6 +14,9 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        showToolbar()
+        setActionTitle(getString(R.string.top_up))
+
         adapter = HomePagerAdapter(this, supportFragmentManager)
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)

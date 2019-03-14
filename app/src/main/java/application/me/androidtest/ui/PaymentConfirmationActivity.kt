@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import application.me.androidtest.BaseActivity
 import application.me.androidtest.model.Product
 import application.me.androidtest.R
@@ -11,6 +12,7 @@ import application.me.androidtest.formatMoney
 import application.me.androidtest.view.CustomDialog
 import application.me.androidtest.presenter.PaymentConfirmationPresenter
 import com.bumptech.glide.Glide
+import application.me.androidtest.helper.StringHelper
 import kotlinx.android.synthetic.main.activity_payment_confirmation.*
 
 class PaymentConfirmationActivity : BaseActivity(), PaymentConfirmationPresenter.View {
@@ -41,6 +43,10 @@ class PaymentConfirmationActivity : BaseActivity(), PaymentConfirmationPresenter
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment_confirmation)
 
+        showToolbar()
+        setActionTitle(getString(R.string.loan_confirmation))
+        showBackButton()
+
         presenter = PaymentConfirmationPresenter(this)
 
         operatorLogo = intent.getIntExtra(INTENT_OPERATOR_LOGO, 0)
@@ -61,6 +67,9 @@ class PaymentConfirmationActivity : BaseActivity(), PaymentConfirmationPresenter
         productAmount.text = product.amount.formatMoney
         adminFee.text = 0.formatMoney
         totalAmount.text = product.amount.formatMoney
+
+        paymentTerms.text = StringHelper.makeColorSpannable(getString(R.string.payment_terms), getString(R.string.payment_terms_highlighted),
+            ContextCompat.getColor(this, R.color.colorPrimary))
 
         pay.setOnClickListener {
             presenter.doPayment(pinInput.text.toString())

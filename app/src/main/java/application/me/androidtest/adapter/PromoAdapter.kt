@@ -24,7 +24,7 @@ class PromoAdapter(private val context: Context) : BaseAdapter<Promo>() {
     override fun onBindItemViewHolder(holder: RecyclerView.ViewHolder, position: Int, t: Promo) {
         (holder as PromoViewHolder).onBind(context, t)
 
-        holder.itemView.setOnClickListener {
+        holder.itemView.promoImage.setOnClickListener {
             onItemClickListener.onItemClick(t)
         }
     }

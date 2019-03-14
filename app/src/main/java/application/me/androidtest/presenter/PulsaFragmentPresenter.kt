@@ -8,11 +8,24 @@ class PulsaFragmentPresenter(private val view: View) {
 
     private val interactor = PulsaInteractor()
 
-    fun checkPhoneNumber(phoneNumber: String) {
+    fun fetchPulsa(phoneNumber: String) {
         if (phoneNumber.length >= 4) {
-            interactor.fetchOperator(phoneNumber, object : PulsaInteractor.OnFetchSuccessListener {
-                override fun onSuccess(operatorLogo: Int?, products: List<Product>) {
-                    view.setOperator(operatorLogo)
+            view.setOperator(interactor.getOperator(phoneNumber))
+            interactor.getPulsa(phoneNumber, object : PulsaInteractor.OnFetchSuccessListener {
+                override fun onSuccess(products: List<Product>) {
+                    view.showProducts(products)
+                }
+            })
+        } else {
+            view.hideOperatorAndProducts()
+        }
+    }
+
+    fun fetchPaketData(phoneNumber: String) {
+        if (phoneNumber.length >= 4) {
+            view.setOperator(interactor.getOperator(phoneNumber))
+            interactor.getPaketData(phoneNumber, object : PulsaInteractor.OnFetchSuccessListener {
+                override fun onSuccess(products: List<Product>) {
                     view.showProducts(products)
                 }
             })

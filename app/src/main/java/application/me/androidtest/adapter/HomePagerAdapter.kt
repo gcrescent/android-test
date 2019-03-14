@@ -12,8 +12,8 @@ class HomePagerAdapter(private val context: Context, fragmentManager: FragmentMa
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> PulsaFragment()
-            1 -> PulsaFragment()
+            0 -> PulsaFragment.newInstance(PulsaFragment.TYPE_PULSA)
+            1 -> PulsaFragment.newInstance(PulsaFragment.TYPE_PAKET_DATA)
             else -> PulsaFragment()
         }
     }
