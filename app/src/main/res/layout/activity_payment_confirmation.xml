@@ -50,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/base_margin"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -93,7 +94,8 @@
                         android:paddingRight="@dimen/base_margin"
                         android:paddingBottom="12dp"
                         android:text="@string/payment_details"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <View
                         style="@style/horizontal_line"
@@ -141,6 +143,7 @@
                         android:layout_marginBottom="12dp"
                         android:text="@string/pay_in_30_days"
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toLeftOf="@+id/barrier"
@@ -179,6 +182,7 @@
                         android:layout_marginRight="@dimen/base_margin"
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@id/totalHint" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -205,7 +209,8 @@
                         android:paddingRight="@dimen/base_margin"
                         android:paddingBottom="12dp"
                         android:text="@string/kredivo_pin"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <View
                         style="@style/horizontal_line"
